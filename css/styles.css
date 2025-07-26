@@ -389,6 +389,10 @@ header {
     color: var(--dark-font-color) !important;
 }
 
+.input-book::placeholder{
+    color: var(--dark-font-color) !important;
+}
+
 .select-book,
 .input-book{
     color: var(--dark-font-color) !important;
