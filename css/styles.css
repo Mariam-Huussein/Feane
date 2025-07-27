@@ -572,9 +572,18 @@ footer{
     .main-title{
         text-align: center;
     }
+
+    .form-book{
+        text-align: center;
+    }
+
+    #reviews .container{
+        padding: 0;
+        max-width: 90%;
+    }
 }
 
-@media screen and (width<=988px) {
+@media screen and (width<=790px) {
 
     html{
         font-size: 12px;
@@ -602,6 +611,7 @@ footer{
         padding: 0.8rem;
         margin: 0 auto 0.8rem auto;
     }
+
 }
 
 @media screen and (width<=480px) {
