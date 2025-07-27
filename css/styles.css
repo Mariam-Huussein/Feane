@@ -649,4 +649,13 @@ footer{
     .offer-card-row{
         flex-direction: column !important;
     }
+    
+    .carousel-indicators-hero{
+        bottom:-34px;
+    }
+
+    .btns-reviews-container {
+        width: 100%;
+        gap: 0;
+    }
 }
