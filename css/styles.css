@@ -70,7 +70,7 @@ ul{
 }
 
 header {
-    width: 86%;
+    width: 99%;
     margin: auto;
     padding: 2px 24px;
 }
@@ -85,6 +85,7 @@ header {
 }
 
 .nav-link{
+    font-size: 0.95rem;
     text-transform: uppercase;
 }
 
@@ -189,19 +190,20 @@ header {
 }
 
 .offer-section{
-    padding: 12rem;
+    padding-top: 6rem;
 }
 
-.offer-section .container .row{
-    min-width: fit-content;
-    margin: auto;
+.offer-card-row{
+    width: 100%;
+    align-items: center;
 }
 
 .offer-card{
     background-color: var(--primary-dark-color);
-    width: 100% !important;
     flex-direction: row;
     height: 100%;
+    width: 100% !important;
+    max-width: 540px;
     transition: all 0.4s ease-in-out;
     color: var(--white-font-color) !important;
 }
@@ -215,8 +217,9 @@ header {
 }
 
 .offer-image{
+    width: 100%;
+    height: 100%;
     border-radius: 100%;
-    width: 150px;
     object-fit: cover;
     object-position: center;
     transform: scale(1);
@@ -225,6 +228,10 @@ header {
 
 .offer-card:hover .offer-image{
     transform: scale(1.2);
+}
+
+.card-body-offer-container{
+    width: fit-content;
 }
 
 .card-body-offer{
@@ -238,7 +245,7 @@ header {
 .card-txt-offer,
 .card-txt-offer sub{
     font-family: var(--secoundry-font) !important;
-    font-size: 1.8rem;
+    font-size: 28px;
     
 }
 
@@ -283,6 +290,12 @@ header {
     border: none !important;
 }
 
+.menu-row{
+    width: 100%;
+    margin: auto;
+    gap: 20px;
+}
+
 .card-all{
     border: none;
     padding: 0;
@@ -317,19 +330,19 @@ header {
 .card-img-box{
     background-color: var(--background-img-card);
     border-radius: 8px 8px 0 45px;
+    padding: 1.5rem 0;
     height: -webkit-fill-available;
 }
 
 .card-items-img{
     width: fit-content;
-    margin: 1rem auto;
+    margin: 0 auto;
     height: 100%;
 }
 
 .card-items-img img {
     max-width: 100%;
-    height: 160px;
-    padding: 0.6rem;
+    height: 150px;
     object-fit: contain;
     object-position: center;
     transform: scale(0.92);
@@ -343,9 +356,10 @@ header {
 
 
 .card-itmes-text{
-    font-size: 15px;
+    font-size: 0.95rem;
     line-height: 18px;
     font-weight: 400;
+    opacity: 0.85;
 }
 
 .btn-card-items{
@@ -533,14 +547,9 @@ footer{
 }
 
 
-@media screen and (width<= 1222px) {
-    .offer-card {
-        background-color: var(--primary-dark-color);
-        width: 100% !important;
-        margin: auto;
-    }
-    .card-body-offer{
-        align-items: center;
+@media screen and (min-width: 992px) {
+    .card-all{
+        width: 28%;
     }
 }
 
@@ -548,22 +557,27 @@ footer{
     .about-section .container .row {
         flex-direction: column-reverse;
     }
+    
+    .menu-section .container{
+        padding: 0; 
+        max-width: 90% !important;
+    }
+
+    .container-about-txt {
+        margin: auto;
+        text-align: center;
+        padding: 0;
+    }
+
+    .main-title{
+        text-align: center;
+    }
 }
 
 @media screen and (width<=988px) {
 
     html{
-        font-size: 62%;
-    }
-    
-    .offer-card {
-        width: 100% !important;
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .card-body-offer{
-        align-items: flex-start;
+        font-size: 12px;
     }
 
 }
@@ -574,5 +588,47 @@ footer{
     }
     .card-all {
         width: 50%;
+    }
+    .hero-section {
+        padding: 0 10px;
+    }
+
+    .form-control,
+    .form-select{
+        width: 90%;
+    }
+
+    .select-book, .input-book {
+        padding: 0.8rem;
+        margin: 0 auto 0.8rem auto;
+    }
+}
+
+@media screen and (width<=480px) {
+    .carousel-indicators-hero {
+        left: 0;
+        text-align: center;
+    }
+
+    .container-offer-image {
+        width: 128px;
+    }
+
+    .card-title-offer, .card-txt-offer, .card-txt-offer sub {
+        font-size: 24px;
+    }
+}
+
+@media screen and (width<=350px) {
+    .container-offer-image {
+        width: 100px;
+    }
+
+    .card-title-offer, .card-txt-offer, .card-txt-offer sub {
+        font-size: 18px;
+    }
+    
+    .offer-card-row{
+        flex-direction: column !important;
     }
 }

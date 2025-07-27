@@ -17,10 +17,10 @@
     <div class="hero-section">
         <header>
             <nav class="navbar navbar-expand-lg py-3">
-                <div class="container-fluid d-flex justify-content-between align-items-center">
-                    <a class="navbar-brand logo mx-auto" href="index.html">Feane</a>
+                <div class="container d-flex justify-content-between align-items-center">
+                    <a class="navbar-brand logo mx-lg-auto" href="index.html">Feane</a>
 
-                    <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" >
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" >
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -63,7 +63,7 @@
                 <div class="carousel-item active">
                     <div class="container-hero-txt" >
                         <div class="row">
-                            <div class="col-md-7 col-lg-6 container-txt">
+                            <div class="col-lg-7 col-md-9 col-sm-12">
                                 <h1 class="main-txt">
                                     Fast Food Restaurant
                                 </h1>
@@ -76,7 +76,7 @@
                 <div class="carousel-item">
                     <div class="container-hero-txt" >
                         <div class="row">
-                            <div class="col-md-7 col-lg-6 container-txt">
+                            <div class="col-lg-7 col-md-9 col-sm-12">
                                 <h1 class="main-txt">
                                     Fast Food Restaurant
                                 </h1>
@@ -89,7 +89,7 @@
                 <div class="carousel-item">
                     <div class="container-hero-txt" >
                         <div class="row">
-                            <div class="col-md-7 col-lg-6 container-txt">
+                            <div class="col-lg-7 col-md-9 col-sm-12">
                                 <h1 class="main-txt">
                                     Fast Food Restaurant
                                 </h1>
@@ -104,30 +104,34 @@
     </div>
 
 
-    <div class="offer-section p-2 p-lg-5">
+    <div class="offer-section" id="offers">
         <div class="container">
             <div class="row row-gap-3 column-gap-lg-4 justify-content-center">
-                <div class="col-lg-5 col-md-12">
-                    <div class="card offer-card" >
-                        <div class="container-offer-image">
+                <div class="card mb-3 offer-card">
+                    <div class="row g-0 mx-0 offer-card-row">
+                        <div class="col-md-5 container-offer-image">
                             <img src="asserts/images/o1.jpg" class="card-img-top offer-image" alt="Tasty Thursdays Offer">
                         </div>
-                        <div class="card-body card-body-offer">
-                            <h5 class="card-title card-title-offer">Tasty Thursdays</h5>
-                            <p class="card-text card-txt-offer mb-2">20% <sub>Off</sub></p>
-                            <a href="#" class="btn btn-primary">Order Now</a>
+                        <div class="col-md-6 card-body-offer-container">
+                            <div class="card-body card-body-offer">
+                                <h5 class="card-title card-title-offer">Tasty Thursdays</h5>
+                                <p class="card-text card-txt-offer">20% <sub>Off</sub></p>
+                                <a href="#" class="btn btn-primary">Order Now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-12">
-                    <div class="card offer-card">
-                        <div class="container-offer-image">
-                            <img src="asserts/images/o2.jpg" class="card-img-top offer-image" alt="Pizza Days Offer">
+                <div class="card mb-3 offer-card">
+                    <div class="row g-0 mx-0 offer-card-row">
+                        <div class="col-md-5 container-offer-image">
+                            <img src="asserts/images/o2.jpg" class="card-img-top offer-image" alt="Tasty Thursdays Offer">
                         </div>
-                        <div class="card-body card-body-offer">
-                            <h5 class="card-title card-title-offer">Pizza Days</h5>
-                            <p class="card-text card-txt-offer mb-2">15% <sub>Off</sub></p>
-                            <a href="#" class="btn btn-primary">Order Now</a>
+                        <div class="col-md-6 card-body-offer-container">
+                            <div class="card-body card-body-offer">
+                                <h5 class="card-title card-title-offer">Pizza Days</h5>
+                                <p class="card-text card-txt-offer">15% <sub>Off</sub></p>
+                                <a href="#" class="btn btn-primary">Order Now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -143,14 +147,14 @@
                 </h2>
             </div>
             <div class="filter-items">
-                <button class="btn btn-filter active" id="All" onclick="filterItems(this.id)" autofocus>All</button>
+                <button class="btn btn-filter active" id="All" onclick="filterItems(this.id)">All</button>
                 <button class="btn btn-filter" id="Burger" onclick="filterItems(this.id)">Burger</button>
                 <button class="btn btn-filter" id="Pizza" onclick="filterItems(this.id)">Pizza</button>
                 <button class="btn btn-filter" id="Pasta" onclick="filterItems(this.id)">Pasta</button>
                 <button class="btn btn-filter" id="Fries" onclick="filterItems(this.id)">Fries</button>
             </div>
-            <div class="row gap-lg-4 justify-content-center gap-3">
-                <div class="card col-lg-3 col-sm-8 mx-sm-2 card-all card-pizza">
+            <div class="row justify-content-center menu-row">
+                <div class="card col-lg-3 col-sm-5 card-all card-pizza">
                     <div class="card-img-box">
                         <div class="card-items-img">
                             <img src="asserts/images/f1.png" class="card-img-top card-itmes-img" alt="Delicious Pizza">
@@ -167,7 +171,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-8 mx-sm-2 card-all card-burger">
+                <div class="card col-lg-3 col-sm-5 card-all card-burger">
                     <div class="card-img-box">
                         <div class="card-items-img">
                             <img src="asserts/images/f2.png" class="card-img-top card-itmes-img" alt="Delicious Burger">
@@ -184,7 +188,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-8 mx-sm-2 card-all card-pizza">
+                <div class="card col-lg-3 col-sm-5 card-all card-pizza">
                     <div class="card-img-box">
                         <div class="card-items-img">
                             <img src="asserts/images/f3.png" class="card-img-top card-itmes-img" alt="Delicious Pizza">
@@ -201,7 +205,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-8 mx-sm-2 card-all card-pasta">
+                <div class="card col-lg-3 col-sm-5 card-all card-pasta">
                     <div class="card-img-box">
                         <div class="card-items-img">
                             <img src="asserts/images/f4.png" class="card-img-top card-itmes-img" alt="Delicious Pasta">
@@ -218,7 +222,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-8 mx-sm-2 card-all card-fries">
+                <div class="card col-lg-3 col-sm-5 card-all card-fries">
                     <div class="card-img-box">
                         <div class="card-items-img">
                             <img src="asserts/images/f5.png" class="card-img-top card-itmes-img" alt="French Fries">
@@ -235,7 +239,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-8 mx-sm-2 card-all card-pizza">
+                <div class="card col-lg-3 col-sm-5 card-all card-pizza">
                     <div class="card-img-box">
                         <div class="card-items-img">
                             <img src="asserts/images/f6.png" class="card-img-top card-itmes-img" alt="Delicious Pizza">
@@ -252,7 +256,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-8 mx-sm-2 card-all card-burger">
+                <div class="card col-lg-3 col-sm-5 card-all card-burger">
                     <div class="card-img-box">
                         <div class="card-items-img">
                             <img src="asserts/images/f7.png" class="card-img-top card-itmes-img" alt="Tasty Burger">
@@ -269,7 +273,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-8 mx-sm-2 card-all card-burger">
+                <div class="card col-lg-3 col-sm-5 card-all card-burger">
                     <div class="card-img-box">
                         <div class="card-items-img">
                             <img src="asserts/images/f8.png" class="card-img-top card-itmes-img" alt="Tasty Burger">
@@ -286,7 +290,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-8 mx-sm-2 card-all card-pasta">
+                <div class="card col-lg-3 col-sm-5 card-all card-pasta">
                     <div class="card-img-box">
                         <div class="card-items-img">
                             <img src="asserts/images/f9.png" class="card-img-top card-itmes-img" alt="Delicious Pasta">
@@ -367,7 +371,7 @@
         </div>
     </div>
 
-    <div class="py-5">
+    <div class="py-5" id="reviews">
         <div class="container">
             <div class="main-txt-container">
                 <h2 class="main-title main-title-book text-center mb-2">
@@ -449,7 +453,7 @@
 
     <footer>
         <div class="container">
-            <div class="row row-gap-md-5 px-md-5">
+            <div class="row row-gap-5 px-md-5">
                 <div class="col-lg-4 col-md-6 px-lg-0 px-sm-5">
                     <div class="first-container-footer text-center">
                         <div class="main-txt-container">
