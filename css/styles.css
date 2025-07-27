@@ -18,6 +18,7 @@
 body{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 html {
@@ -480,41 +481,48 @@ header {
     cursor: default;
 }
 
+.btns-reviews-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 12px auto auto;
+    gap: 30px;
+}
+
 .btn-carousel-review{
-    border-radius: 100%;
-    height: 2rem;
-    width: 2rem;
-    margin: 3rem auto 0;
+    width: fit-content;
+    background-color: transparent;
 }
 
-.btn-carousel-review .carousel-control-next-icon,
-.btn-carousel-review .carousel-control-prev-icon{
-    width: 1.5rem;
-    height: 1.5rem;
+.btn-carousel-review:hover{
+    background-color: transparent !important;
+    box-shadow: none;
 }
 
-.carousel-control-next,
-.carousel-control-prev{
-    top: unset;
-    bottom: unset;
-    width: unset;
+.btn-carousel-review{
+    position: unset;
     opacity: 1;
-    padding: 5px;
 }
 
-.carousel-control-next{
-    right: 45%;
+.prev-icon-review,
+.next-icon-review{
+    color: var(--primary-orange-color);
+    font-size: 36px;
+    opacity: 1;
 }
 
-.carousel-control-prev{
-    left: 45%;
+.btn-carousel-review:hover .prev-icon-review,
+.btn-carousel-review:hover .next-icon-review{
+    color: var(--secoundry-orange-color);
 }
+
 
 footer{
     width: 100%;
     height: fit-content;
     padding: 40px 0 !important;
-    margin-top: 5rem;
+    margin-top: 1.5rem;
     background-color: var(--primary-dark-color);
     color: var(--white-font-color) !important;
     padding: 20px;
