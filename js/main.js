@@ -1,3 +1,9 @@
+let toggler = document.querySelector('.navbar-toggler');
+toggler.addEventListener('click',()=>{
+    toggler.classList.toggle('open');
+})
+
+
 let allCards = document.querySelectorAll('.card-all');
 let pizzaCards = document.querySelectorAll('.card-pizza');
 let burgerCards = document.querySelectorAll('.card-burger');
