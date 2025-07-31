@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="asserts/images/favicon.png" type="">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -19,11 +19,16 @@
             <nav class="navbar navbar-expand-lg py-3">
                 <div class="container d-flex justify-content-between align-items-center">
                     <a class="navbar-brand logo mx-lg-auto" href="index.html">Feane</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" >
-                        <span class="toggler-icon"></span>
-                        <span class="toggler-icon"></span>
-                        <span class="toggler-icon"></span>
-                    </button>
+                    <div>
+                        <div class="shop-notfication">
+                            <i class="fa-solid fa-circle dot-notfication-toggler"></i>
+                        </div>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" >
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                    </div>
 
                     <div class="collapse navbar-collapse align-items-center text-center" id="navbarContent">
                         <div class="d-flex justify-content-between flex-lg-row flex-column align-items-center w-100 flex-wrap gap-3">
@@ -39,7 +44,8 @@
                                 <a class="nav-link nav-serv" href="#">
                                     <i class="fa-solid fa-user"></i>              
                                 </a>
-                                <a class="nav-link nav-serv" href="#">
+                                <a class="nav-link nav-serv shop-notfication" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart">
+                                    <i class="fa-solid fa-circle dot-notfication"></i>
                                     <i class="fa-solid fa-cart-shopping"></i>
                                 </a>
                                 <a class="nav-link nav-serv" href="#">
@@ -51,6 +57,28 @@
                     </div>
                 </div>
             </nav>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="shoppingCart" aria-labelledby="offcanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasLabel">Your Shopping Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                </div>
+                <div class="d-flex align-items-center justify-content-around mx-auto mb-4" style="width: 90%;">
+                    <p class="shopping-cart-cost">The Total Cost Is: $<span id="total-reset">0</span></p>
+                    <button type="button" class="btn" onclick="submitOrder()">Order Now</button>
+                </div>
+            </div>
+
+            <div id="custom-alert-overlay">
+                <div id="custom-alert">
+                    <p id="custom-alert-message"></p>
+                    <button class="btn" id="custom-alert-close" onclick="closePopup()">OK</button>
+                </div>
+            </div>
+            
+
         </header>
 
         <div id="carousel-main-hero" class="carousel slide hero-carousel" data-bs-ride="carousel">
@@ -111,7 +139,7 @@
                 <div class="card mb-3 offer-card">
                     <div class="row g-0 mx-0 offer-card-row">
                         <div class="col-md-5 container-offer-image">
-                            <img src="asserts/images/o1.jpg" class="card-img-top offer-image" alt="Tasty Thursdays Offer">
+                            <img src="assets/images/o1.jpg" class="card-img-top offer-image" alt="Tasty Thursdays Offer">
                         </div>
                         <div class="col-md-6 card-body-offer-container">
                             <div class="card-body card-body-offer">
@@ -125,7 +153,7 @@
                 <div class="card mb-3 offer-card">
                     <div class="row g-0 mx-0 offer-card-row">
                         <div class="col-md-5 container-offer-image">
-                            <img src="asserts/images/o2.jpg" class="card-img-top offer-image" alt="Tasty Thursdays Offer">
+                            <img src="assets/images/o2.jpg" class="card-img-top offer-image" alt="Tasty Thursdays Offer">
                         </div>
                         <div class="col-md-6 card-body-offer-container">
                             <div class="card-body card-body-offer">
@@ -155,156 +183,156 @@
                 <button class="btn btn-filter" id="Fries" onclick="filterItems(this.id)">Fries</button>
             </div>
             <div class="row justify-content-center menu-row">
-                <div class="card col-lg-3 col-sm-5 card-all card-pizza">
+                <div class="card col-lg-3 col-sm-5 card-all card-pizza" data-id="card-1">
                     <div class="card-img-box">
-                        <div class="card-items-img">
-                            <img src="asserts/images/f1.png" class="card-img-top card-itmes-img" alt="Delicious Pizza">
+                        <div class="container-card-items-img">
+                            <img src="assets/images/f1.png" class="card-img-top card-items-img" alt="Delicious Pizza">
                         </div>
                     </div>
-                    <div class="card-body card-itmes-body">
-                        <h5 class="card-title card-itmes-title">Delicious Pizza</h5>
-                        <p class="card-text card-itmes-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                    <div class="card-body card-items-body">
+                        <h5 class="card-title card-items-title">Delicious Pizza</h5>
+                        <p class="card-text card-items-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <span>$20</span>
-                            <a href="#" class="btn btn-card-items">
+                            <button type="button" class="btn btn-card-items" onclick="addToCart(this)">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-5 card-all card-burger">
+                <div class="card col-lg-3 col-sm-5 card-all card-burger" data-id="card-2">
                     <div class="card-img-box">
-                        <div class="card-items-img">
-                            <img src="asserts/images/f2.png" class="card-img-top card-itmes-img" alt="Delicious Burger">
+                        <div class="container-card-items-img">
+                            <img src="assets/images/f2.png" class="card-img-top card-items-img" alt="Delicious Burger">
                         </div>
                     </div>
-                    <div class="card-body card-itmes-body">
-                        <h5 class="card-title card-itmes-title">Delicious Burger</h5>
-                        <p class="card-text card-itmes-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                    <div class="card-body card-items-body">
+                        <h5 class="card-title card-items-title">Delicious Burger</h5>
+                        <p class="card-text card-items-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <span>$15</span>
-                            <a href="#" class="btn btn-card-items">
+                            <button type="button" class="btn btn-card-items" onclick="addToCart(this)">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-5 card-all card-pizza">
+                <div class="card col-lg-3 col-sm-5 card-all card-pizza" data-id="card-3">
                     <div class="card-img-box">
-                        <div class="card-items-img">
-                            <img src="asserts/images/f3.png" class="card-img-top card-itmes-img" alt="Delicious Pizza">
+                        <div class="container-card-items-img">
+                            <img src="assets/images/f3.png" class="card-img-top card-items-img" alt="Delicious Pizza">
                         </div>
                     </div>
-                    <div class="card-body card-itmes-body">
-                        <h5 class="card-title card-itmes-title">Delicious Pizza</h5>
-                        <p class="card-text card-itmes-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                    <div class="card-body card-items-body">
+                        <h5 class="card-title card-items-title">Delicious Pizza</h5>
+                        <p class="card-text card-items-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <span>$17</span>
-                            <a href="#" class="btn btn-card-items">
+                            <button type="button" class="btn btn-card-items" onclick="addToCart(this)">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-5 card-all card-pasta">
+                <div class="card col-lg-3 col-sm-5 card-all card-pasta" data-id="card-4">
                     <div class="card-img-box">
-                        <div class="card-items-img">
-                            <img src="asserts/images/f4.png" class="card-img-top card-itmes-img" alt="Delicious Pasta">
+                        <div class="container-card-items-img">
+                            <img src="assets/images/f4.png" class="card-img-top card-items-img" alt="Delicious Pasta">
                         </div>
                     </div>
-                    <div class="card-body card-itmes-body">
-                        <h5 class="card-title card-itmes-title">Delicious Pasta</h5>
-                        <p class="card-text card-itmes-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                    <div class="card-body card-items-body">
+                        <h5 class="card-title card-items-title">Delicious Pasta</h5>
+                        <p class="card-text card-items-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <span>$18</span>
-                            <a href="#" class="btn btn-card-items">
+                            <button type="button" class="btn btn-card-items" onclick="addToCart(this)">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-5 card-all card-fries">
+                <div class="card col-lg-3 col-sm-5 card-all card-fries" data-id="card-5">
                     <div class="card-img-box">
-                        <div class="card-items-img">
-                            <img src="asserts/images/f5.png" class="card-img-top card-itmes-img" alt="French Fries">
+                        <div class="container-card-items-img">
+                            <img src="assets/images/f5.png" class="card-img-top card-items-img" alt="French Fries">
                         </div>
                     </div>
-                    <div class="card-body card-itmes-body">
-                        <h5 class="card-title card-itmes-title">French Fries</h5>
-                        <p class="card-text card-itmes-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                    <div class="card-body card-items-body">
+                        <h5 class="card-title card-items-title">French Fries</h5>
+                        <p class="card-text card-items-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <span>$10</span>
-                            <a href="#" class="btn btn-card-items">
+                            <button type="button" class="btn btn-card-items" onclick="addToCart(this)">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-5 card-all card-pizza">
+                <div class="card col-lg-3 col-sm-5 card-all card-pizza" data-id="card-6">
                     <div class="card-img-box">
-                        <div class="card-items-img">
-                            <img src="asserts/images/f6.png" class="card-img-top card-itmes-img" alt="Delicious Pizza">
+                        <div class="container-card-items-img">
+                            <img src="assets/images/f6.png" class="card-img-top card-items-img" alt="Delicious Pizza">
                         </div>
                     </div>
-                    <div class="card-body card-itmes-body">
-                        <h5 class="card-title card-itmes-title">Delicious Pizza</h5>
-                        <p class="card-text card-itmes-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                    <div class="card-body card-items-body">
+                        <h5 class="card-title card-items-title">Delicious Pizza</h5>
+                        <p class="card-text card-items-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <span>$15</span>
-                            <a href="#" class="btn btn-card-items">
+                            <button type="button" class="btn btn-card-items" onclick="addToCart(this)">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-5 card-all card-burger">
+                <div class="card col-lg-3 col-sm-5 card-all card-burger" data-id="card-7">
                     <div class="card-img-box">
-                        <div class="card-items-img">
-                            <img src="asserts/images/f7.png" class="card-img-top card-itmes-img" alt="Tasty Burger">
+                        <div class="container-card-items-img">
+                            <img src="assets/images/f7.png" class="card-img-top card-items-img" alt="Tasty Burger">
                         </div>
                     </div>
-                    <div class="card-body card-itmes-body">
-                        <h5 class="card-title card-itmes-title">Tasty Burger</h5>
-                        <p class="card-text card-itmes-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                    <div class="card-body card-items-body">
+                        <h5 class="card-title card-items-title">Tasty Burger</h5>
+                        <p class="card-text card-items-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <span>$12</span>
-                            <a href="#" class="btn btn-card-items">
+                            <button type="button" class="btn btn-card-items" onclick="addToCart(this)">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-5 card-all card-burger">
+                <div class="card col-lg-3 col-sm-5 card-all card-burger" data-id="card-8">
                     <div class="card-img-box">
-                        <div class="card-items-img">
-                            <img src="asserts/images/f8.png" class="card-img-top card-itmes-img" alt="Tasty Burger">
+                        <div class="container-card-items-img">
+                            <img src="assets/images/f8.png" class="card-img-top card-items-img" alt="Tasty Burger">
                         </div>
                     </div>
-                    <div class="card-body card-itmes-body">
-                        <h5 class="card-title card-itmes-title">Tasty Burger</h5>
-                        <p class="card-text card-itmes-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                    <div class="card-body card-items-body">
+                        <h5 class="card-title card-items-title">Tasty Burger</h5>
+                        <p class="card-text card-items-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <span>$14</span>
-                            <a href="#" class="btn btn-card-items">
+                            <button type="button" class="btn btn-card-items" onclick="addToCart(this)">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-5 card-all card-pasta">
+                <div class="card col-lg-3 col-sm-5 card-all card-pasta" data-id="card-9">
                     <div class="card-img-box">
-                        <div class="card-items-img">
-                            <img src="asserts/images/f9.png" class="card-img-top card-itmes-img" alt="Delicious Pasta">
+                        <div class="container-card-items-img">
+                            <img src="assets/images/f9.png" class="card-img-top card-items-img" alt="Delicious Pasta">
                         </div>
                     </div>
-                    <div class="card-body card-itmes-body">
-                        <h5 class="card-title card-itmes-title">Delicious Pasta</h5>
-                        <p class="card-text card-itmes-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                    <div class="card-body card-items-body">
+                        <h5 class="card-title card-items-title">Delicious Pasta</h5>
+                        <p class="card-text card-items-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <span>$10</span>
-                            <a href="#" class="btn btn-card-items">
+                            <button type="button" class="btn btn-card-items" onclick="addToCart(this)">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -320,7 +348,7 @@
         <div class="container">
             <div class="row gap-4 row-gap-5 justify-content-center">
                 <div class="col-lg-5 col-sm-12 container-abt-img">
-                    <img src="asserts/images/about-img.png" alt="Burger" class="img-about">
+                    <img src="assets/images/about-img.png" alt="Burger" class="img-about">
                 </div>
                 <div class="col-lg-5 col-sm-7 container-about-txt">
                     <div >
@@ -392,7 +420,7 @@
                                 </div>
                             </div>
                             <div class="customer-img-container">
-                                <img src="asserts/images/client1.jpg" alt="Image client" class="customer-img">
+                                <img src="assets/images/client1.jpg" alt="Image client" class="customer-img">
                             </div>
                             </div>
                             <div class="col-lg-5 col-md-6 col-sm-7 mb-3 d-none d-md-block">
@@ -404,7 +432,7 @@
                                     </div>
                                 </div>
                                 <div class="customer-img-container">
-                                    <img src="asserts/images/client2.jpg" alt="Image client" class="customer-img">
+                                    <img src="assets/images/client2.jpg" alt="Image client" class="customer-img">
                                 </div>
                             </div>
                         </div>
@@ -421,7 +449,7 @@
                                     </div>
                                 </div>
                                 <div class="customer-img-container">
-                                    <img src="asserts/images/client1.jpg" alt="Image client" class="customer-img">
+                                    <img src="assets/images/client1.jpg" alt="Image client" class="customer-img">
                                 </div>
                             </div>
                             <div class="col-lg-5 col-md-6 col-sm-7 mb-3 d-none d-md-block">
@@ -433,7 +461,7 @@
                                     </div>
                                 </div>
                                 <div class="customer-img-container">
-                                    <img src="asserts/images/client2.jpg" alt="Image client" class="customer-img">
+                                    <img src="assets/images/client2.jpg" alt="Image client" class="customer-img">
                                 </div>
                             </div>
                         </div>
