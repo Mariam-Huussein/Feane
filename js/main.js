@@ -75,6 +75,7 @@ function filterItems(btn){
             });
             break;
     }
+    AOS.refresh();
 }
 
 let shoppingCartEl = document.getElementById('shoppingCart');

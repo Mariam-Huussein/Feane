@@ -929,4 +929,13 @@ footer{
     .hero-section {
         height: 110vh;
     }
+    .btn-nav {
+        padding: 4px 20px;
+    }
+
+    .item-cart-container {
+        height: 320px;
+        padding: 10px 10px 40px;
+        flex-direction: column;
+    }
 }
