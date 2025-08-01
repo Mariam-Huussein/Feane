@@ -7,13 +7,13 @@ This project was developed as a frontend training task and replicates the layout
 
 ## ✨ Features
 
-✅ Fully responsive design across all devices
-✅ Hero section with call-to-action
-✅ Food menu section with categorized items
-✅ Carousel for testimonials or special offers
-✅ Contact & location sections
-✅ Font Awesome icons integration
-✅ Scroll animations using AOS (Animate On Scroll)
+- ✅ Fully responsive design across all devices
+- ✅ Hero section with call-to-action
+- ✅ Food menu section with categorized items
+- ✅ Carousel for testimonials or special offers
+- ✅ Contact & location sections
+- ✅ Font Awesome icons integration
+- ✅ Scroll animations using AOS (Animate On Scroll)
 
 ## Shopping Cart 🛒 **(Custom Feature)**
 - Add & remove items dynamically
