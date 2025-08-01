@@ -34,8 +34,6 @@ This project was developed as a frontend training task and replicates the layout
 - **Font Awesome**
 - **AOS (Animate On Scroll) via CDN
 
-**
-
 ---
 
 ## 📁 Folder Structure
