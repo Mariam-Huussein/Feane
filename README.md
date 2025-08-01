@@ -1,19 +1,27 @@
 # 🍽️ Feane Restaurant Template
 
-A fully responsive restaurant landing page built entirely from scratch using **HTML**, **CSS**, **JavaScript**, and **Bootstrap**.  
-This project was developed as a frontend training task and replicates the layout and interactive behavior of a modern restaurant website template.
+A fully responsive restaurant landing page built entirely from scratch using **HTML, CSS, JavaScript, and Bootstrap**.
+This project was developed as a frontend training task and replicates the layout and interactive behavior of a modern restaurant website.
 
 ---
 
 ## ✨ Features
 
-- ✅ Fully responsive design across all devices
-- ✅ Sticky navigation bar
-- ✅ Hero section with call-to-action
-- ✅ Menu section with categorized food items
-- ✅ Carousel for testimonials or special offers
-- ✅ Contact and location sections
-- ✅ Font Awesome icons integration
+✅ Fully responsive design across all devices
+✅ Hero section with call-to-action
+✅ Food menu section with categorized items
+✅ Carousel for testimonials or special offers
+✅ Contact & location sections
+✅ Font Awesome icons integration
+✅ Scroll animations using AOS (Animate On Scroll)
+
+## Shopping Cart 🛒 **(Custom Feature)**
+- Add & remove items dynamically
+- Real-time total price calculation
+- Notification dot when items are added
+- Order confirmation popup
+- Cart state persists using Local Storage
+- Empty cart state message
 
 ---
 
@@ -24,26 +32,28 @@ This project was developed as a frontend training task and replicates the layout
 - **JavaScript (Vanilla)**
 - **Bootstrap 5**
 - **Font Awesome**
+- **AOS (Animate On Scroll) via CDN
+
+**
 
 ---
 
 ## 📁 Folder Structure
 ```
 Feane/
-├── assets/
-│ └── images/ # All images used in the website
+├── assets/ 
+│   └── images/               # Website images
 ├── css/
-│ ├── style.css # Main stylesheet
-│ ├── bootstrap.min.css # Bootstrap CSS
-│ └── all.min.css # Font Awesome CSS
+│   ├── bootstrap.min.css     # Bootstrap CSS
+│   ├── all.min.css           # Font Awesome CSS
+│   └── style.css             # Custom styles
 ├── js/
-│ ├── main.js # Main JavaScript file
-│ ├── bootstrap.bundle.min.js# Bootstrap JavaScript
-│ └── all.min.js # Font Awesome JavaScript
-├── index.html # Main HTML file
-└── README.md # Project documentation
+│   ├── bootstrap.bundle.min.js # Bootstrap JS
+│   ├── all.min.js              # Font Awesome JS
+│   └── main.js                 # Main JavaScript logic
+├── index.html                 # Main HTML file
+└── README.md                  # Project documentation
 ```
-
 
 ---
 
@@ -53,7 +63,7 @@ Feane/
 
 ---
 
-## 🧭 Inspired By
+## 🎨 Inspired By
 
 - [Original Feane Template on ThemeWagon](https://themewagon.github.io/feane/index.html)
 
