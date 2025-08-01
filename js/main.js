@@ -280,8 +280,10 @@ function submitOrder() {
     document.body.style.overflowY = 'hidden';
 
     if (totalResetNumber === 0) {
+        let target= document.querySelector('#menu');
         alertMessage.innerHTML = `<span class="order-recived-success"><i class="fa-solid fa-circle-exclamation"></i></span><p>Your cart is empty!<br> Add some items before ordering.</p>`;
         alertOverlay.style.display = 'flex';
+        target.scrollIntoView({ behavior: 'smooth' });
     }
 
     else{
