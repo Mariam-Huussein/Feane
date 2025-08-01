@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -14,9 +15,9 @@
     <style></style>
 </head>
 <body>
-    <div class="hero-section">
+    <section class="hero-section">
         <header>
-            <nav class="navbar navbar-expand-lg py-3">
+            <nav class="navbar navbar-expand-lg py-3" data-aos="fade-down" data-aos-duration="1000">
                 <div class="container d-flex justify-content-between align-items-center">
                     <a class="navbar-brand logo mx-lg-auto" href="index.html">Feane</a>
                     <div>
@@ -58,6 +59,7 @@
                 </div>
             </nav>
 
+            <!--Cart Shopping Content Start-->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="shoppingCart" aria-labelledby="offcanvasLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasLabel">Your Shopping Cart</h5>
@@ -70,18 +72,20 @@
                     <button type="button" class="btn" onclick="submitOrder()">Order Now</button>
                 </div>
             </div>
+            <!--Cart Shopping Content End-->
 
+            <!--Alert OF Submitting Order Start-->
             <div id="custom-alert-overlay">
                 <div id="custom-alert">
                     <p id="custom-alert-message"></p>
                     <button class="btn" id="custom-alert-close" onclick="closePopup()">OK</button>
                 </div>
             </div>
+            <!--Alert OF Submitting Order End-->
             
-
         </header>
 
-        <div id="carousel-main-hero" class="carousel slide hero-carousel" data-bs-ride="carousel">
+        <div id="carousel-main-hero" class="carousel slide hero-carousel" data-bs-ride="carousel" data-aos="fade-right" data-aos-duration="1500">
             <div class="carousel-indicators carousel-indicators-hero">
                 <button type="button" data-bs-target="#carousel-main-hero" data-bs-slide-to="0" class="active"></button>
                 <button type="button" data-bs-target="#carousel-main-hero" data-bs-slide-to="1"></button>
@@ -130,13 +134,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
-    <div class="offer-section" id="offers">
+    <section class="offer-section" id="offers">
         <div class="container">
             <div class="row row-gap-3 column-gap-lg-4 justify-content-center">
-                <div class="card mb-3 offer-card">
+                <div class="card mb-3 offer-card" data-aos="zoom-out-right" data-aos-duration="1000">
                     <div class="row g-0 mx-0 offer-card-row">
                         <div class="col-md-5 container-offer-image">
                             <img src="assets/images/o1.jpg" class="card-img-top offer-image" alt="Tasty Thursdays Offer">
@@ -150,7 +154,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3 offer-card">
+                <div class="card mb-3 offer-card" data-aos="zoom-out-left" data-aos-duration="1000">
                     <div class="row g-0 mx-0 offer-card-row">
                         <div class="col-md-5 container-offer-image">
                             <img src="assets/images/o2.jpg" class="card-img-top offer-image" alt="Tasty Thursdays Offer">
@@ -166,16 +170,16 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="menu-section mb-lg-4" id="menu">
+    <section class="menu-section mb-lg-4" id="menu">
         <div class="container">
-            <div class="main-txt-container">
+            <div class="main-txt-container" data-aos="flip-left" data-aos-duration="1500">
                 <h2 class="main-title">
                     Our Menu
                 </h2>
             </div>
-            <div class="filter-items">
+            <div class="filter-items" data-aos="fade-down" data-aos-duration="1500">
                 <button class="btn btn-filter active" id="All" onclick="filterItems(this.id)">All</button>
                 <button class="btn btn-filter" id="Burger" onclick="filterItems(this.id)">Burger</button>
                 <button class="btn btn-filter" id="Pizza" onclick="filterItems(this.id)">Pizza</button>
@@ -183,7 +187,7 @@
                 <button class="btn btn-filter" id="Fries" onclick="filterItems(this.id)">Fries</button>
             </div>
             <div class="row justify-content-center menu-row">
-                <div class="card col-lg-3 col-sm-5 card-all card-pizza" data-id="card-1">
+                <div class="card col-lg-3 col-sm-5 card-all card-pizza" data-id="card-1" data-aos="fade-down" data-aos-duration="1500">
                     <div class="card-img-box">
                         <div class="container-card-items-img">
                             <img src="assets/images/f1.png" class="card-img-top card-items-img" alt="Delicious Pizza">
@@ -200,7 +204,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-5 card-all card-burger" data-id="card-2">
+                <div class="card col-lg-3 col-sm-5 card-all card-burger" data-id="card-2" data-aos="fade-down" data-aos-duration="1500">
                     <div class="card-img-box">
                         <div class="container-card-items-img">
                             <img src="assets/images/f2.png" class="card-img-top card-items-img" alt="Delicious Burger">
@@ -217,7 +221,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-5 card-all card-pizza" data-id="card-3">
+                <div class="card col-lg-3 col-sm-5 card-all card-pizza" data-id="card-3" data-aos="fade-down" data-aos-duration="1500">
                     <div class="card-img-box">
                         <div class="container-card-items-img">
                             <img src="assets/images/f3.png" class="card-img-top card-items-img" alt="Delicious Pizza">
@@ -234,7 +238,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-5 card-all card-pasta" data-id="card-4">
+                <div class="card col-lg-3 col-sm-5 card-all card-pasta" data-id="card-4" data-aos="fade-down" data-aos-duration="1500">
                     <div class="card-img-box">
                         <div class="container-card-items-img">
                             <img src="assets/images/f4.png" class="card-img-top card-items-img" alt="Delicious Pasta">
@@ -251,7 +255,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-5 card-all card-fries" data-id="card-5">
+                <div class="card col-lg-3 col-sm-5 card-all card-fries" data-id="card-5" data-aos="fade-down" data-aos-duration="1500">
                     <div class="card-img-box">
                         <div class="container-card-items-img">
                             <img src="assets/images/f5.png" class="card-img-top card-items-img" alt="French Fries">
@@ -268,7 +272,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-5 card-all card-pizza" data-id="card-6">
+                <div class="card col-lg-3 col-sm-5 card-all card-pizza" data-id="card-6" data-aos="fade-down" data-aos-duration="1500">
                     <div class="card-img-box">
                         <div class="container-card-items-img">
                             <img src="assets/images/f6.png" class="card-img-top card-items-img" alt="Delicious Pizza">
@@ -285,7 +289,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-5 card-all card-burger" data-id="card-7">
+                <div class="card col-lg-3 col-sm-5 card-all card-burger" data-id="card-7" data-aos="fade-down" data-aos-duration="1500">
                     <div class="card-img-box">
                         <div class="container-card-items-img">
                             <img src="assets/images/f7.png" class="card-img-top card-items-img" alt="Tasty Burger">
@@ -302,7 +306,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-5 card-all card-burger" data-id="card-8">
+                <div class="card col-lg-3 col-sm-5 card-all card-burger" data-id="card-8" data-aos="fade-down" data-aos-duration="1500">
                     <div class="card-img-box">
                         <div class="container-card-items-img">
                             <img src="assets/images/f8.png" class="card-img-top card-items-img" alt="Tasty Burger">
@@ -319,7 +323,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-sm-5 card-all card-pasta" data-id="card-9">
+                <div class="card col-lg-3 col-sm-5 card-all card-pasta" data-id="card-9" data-aos="fade-down" data-aos-duration="1500"x>
                     <div class="card-img-box">
                         <div class="container-card-items-img">
                             <img src="assets/images/f9.png" class="card-img-top card-items-img" alt="Delicious Pasta">
@@ -341,18 +345,18 @@
                 <button class="btn">View More</button>
             </div>
         </div>
-    </div>
+    </section>
 
 
-    <div class="about-section" id="about">
+    <section class="about-section" id="about">
         <div class="container">
             <div class="row gap-4 row-gap-5 justify-content-center">
-                <div class="col-lg-5 col-sm-12 container-abt-img">
+                <div class="col-lg-5 col-sm-12 container-abt-img" data-aos="fade-up-right" data-aos-duration="900">
                     <img src="assets/images/about-img.png" alt="Burger" class="img-about">
                 </div>
-                <div class="col-lg-5 col-sm-7 container-about-txt">
-                    <div >
-                        <h2 class="main-title">
+                <div class="col-lg-5 col-sm-7 container-about-txt"  data-aos="fade-down-left" data-aos-duration="1000">
+                    <div>
+                        <h2 class="main-title main-title-footer">
                             We Are Feane
                         </h2>
                         <p class="my-4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All</p>
@@ -361,54 +365,53 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="my-4" id="book" >
+    <section class="my-4" id="book" >
         <div class="container px-sm-5">
             <div class="row gap-4 justify-content-center"> 
                 <div class="col-lg-5 col-md-12 p-lg-2">
-                    <div class="main-txt-container">
+                    <div class="main-txt-container" data-aos="flip-left" data-aos-duration="1000">
                         <h2 class="main-title main-title-book">
                             Book A Table
                         </h2>
                     </div>
                     <form class="form-book">
-                        <input type="text" class="form-control input-book" name="name" id="name" placeholder="Your Name" required>
-                        <input type="tel" class="form-control input-book" name="phone" id="phone" placeholder="Phone Number" required>
-                        <input type="email" class="form-control input-book" id="floatingInputInvalid" placeholder="Your Email" required>
-                        <select class="form-select select-book" id="floatingSelect" required>
+                        <input type="text" class="form-control input-book" name="name" id="name" placeholder="Your Name" required data-aos="fade-up" data-aos-duration="900">
+                        <input type="tel" class="form-control input-book" name="phone" id="phone" placeholder="Phone Number" required data-aos="fade-up" data-aos-duration="900">
+                        <input type="email" class="form-control input-book" id="floatingInputInvalid" placeholder="Your Email" required data-aos="fade-up" data-aos-duration="900">
+                        <select class="form-select select-book" id="floatingSelect" required data-aos="fade-up" data-aos-duration="900">
                             <option selected disabled>How many persons?</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
-                        <input type="date" name="date-book" id="date-book" class="form-control input-book">
-                        <button type="submit" class="btn btn-sbt">Book Now</button>
+                        <input type="date" name="date-book" id="date-book" class="form-control input-book" required data-aos="fade-up" data-aos-duration="900">
+                        <button type="submit" class="btn btn-sbt" required data-aos="fade-up-right" data-aos-duration="900">Book Now</button>
                     </form>
                 </div>
                 <div class="col-lg-5 col-md-12">
-                    <div class="map-container">
+                    <div class="map-container" required data-aos="zoom-in-left" data-aos-duration="1500">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.868076156836!2d-74.00713948459483!3d40.71277597933009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a3166e5d1af%3A0x4cf45f8b9a9a7e71!2sNew+York+City+Hall!5e0!3m2!1sen!2sus!4v1620233285453!5m2!1sen!2sus" 
-                            allowfullscreen="" 
                             loading="lazy">
                         </iframe> 
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="py-5" id="reviews">
+    <section class="py-5" id="reviews">
         <div class="container">
-            <div class="main-txt-container">
+            <div class="main-txt-container" data-aos="flip-left" data-aos-duration="1000">
                 <h2 class="main-title main-title-book text-center mb-2">
                     What Says Our Customers
                 </h2>
             </div>
             <div class="carousel slide mt-4" data-bs-ride="carousel" id="carousel-review">
-                <div class="carousel-inner">
+                <div class="carousel-inner" data-aos="fade-up" data-aos-duration="1000">
                     <div class="carousel-item active">
                         <div class="row justify-content-center px-sm-5">
                             <div class="col-lg-5 col-md-6 col-sm-7 mb-3">
@@ -468,25 +471,25 @@
                     </div>
                 </div>
                 <div class="btns-reviews-container">
-                    <button class="carousel-control-prev btn btn-carousel-review" type="button" data-bs-target="#carousel-review" data-bs-slide="prev">
+                    <button class="carousel-control-prev btn btn-carousel-review" type="button" data-bs-target="#carousel-review" data-bs-slide="prev" data-aos="fade-up-right" data-aos-duration="1200">
                         <i class="fa-solid fa-circle-chevron-left prev-icon-review"></i>
                     </button>
-                    <button class="carousel-control-next btn btn-carousel-review" type="button" data-bs-target="#carousel-review" data-bs-slide="next">
+                    <button class="carousel-control-next btn btn-carousel-review" type="button" data-bs-target="#carousel-review" data-bs-slide="next" data-aos="fade-up-left" data-aos-duration="1200">
                         <i class="fa-solid fa-circle-chevron-right next-icon-review"></i>
                     </button>
                 </div>
 
             </div>
         </div>
-    </div>
+    </section>
 
     <footer>
-        <div class="container">
+        <div class="container" data-aos="fade-down" data-aos-duration="600">
             <div class="row row-gap-5 px-md-5">
-                <div class="col-lg-4 col-md-6 px-lg-0 px-sm-5">
+                <div class="col-lg-4 col-md-6 px-lg-0 px-sm-5" data-aos="fade-up-right" data-aos-duration="1000">
                     <div class="first-container-footer text-center">
                         <div class="main-txt-container">
-                            <h2 class="main-title text-center mb-2">Contact Us</h2>
+                            <h2 class="main-title main-title-footer text-center mb-2">Contact Us</h2>
                         </div>
                         <ul class="d-flex justify-content-around align-items-center flex-column gap-2">
                             <li>
@@ -501,10 +504,10 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 px-lg-0 px-md-5">
+                <div class="col-lg-4 col-md-6 px-lg-0 px-md-5" data-aos="fade-up" data-aos-duration="1000">
                     <div class="secound-container-footer text-center">
                         <div class="main-txt-container">
-                            <h2 class="main-title text-center mb-2">Feane</h2>
+                            <h2 class="main-title main-title-footer text-center mb-2">Feane</h2>
                         </div>
                         <div class="container-txt-footer">
                             <p>Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with</p>
@@ -518,10 +521,10 @@
                         </div>
                     </div>
                 </div>                
-                <div class="col-lg-4 px-lg-0 px-sm-5">
+                <div class="col-lg-4 px-lg-0 px-sm-5" data-aos="fade-up-left" data-aos-duration="1000">
                     <div class="third-container-footer text-center">
                         <div class="main-txt-container">
-                            <h2 class="main-title text-center mb-2">Opening Hours</h2>
+                            <h2 class="main-title main-title-footer text-center mb-2">Opening Hours</h2>
                         </div>
                         <p class="mb-2">Everyday</p>
                         <p>10.00 Am -10.00 Pm</p>
@@ -534,5 +537,9 @@
     <script src="js/main.js"></script>
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
