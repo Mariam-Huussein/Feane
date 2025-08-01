@@ -1,19 +1,3 @@
-let toggler = document.querySelector('.navbar-toggler');
-let hero = document.querySelector('.hero-section');
-
-//Change Toggler State when click on it
-toggler.addEventListener('click',()=>{
-    let menuNoftication = document.querySelector('.dot-notfication-toggler');
-    if(menuNoftication.classList.contains('active')){
-        menuNoftication.classList.remove('active');
-    }
-    else{
-        menuNoftication.classList.add('active');
-    }
-    toggler.classList.toggle('open');
-    hero.classList.toggle('open');
-})
-
 //Declare Cards
 let allCards = document.querySelectorAll('.card-all');
 let pizzaCards = document.querySelectorAll('.card-pizza');
@@ -99,9 +83,24 @@ let totalReset = document.querySelector('#total-reset');
 let totalResetNumber =0;
 let cartArray = [];
 
-
 getItemsFromStorage();
 updateCartDisplay();
+
+
+//Change Toggler State when click on it
+function changeTogglerState(){
+    let toggler = document.querySelector('.navbar-toggler');
+    let hero = document.querySelector('.hero-section');
+    let menuNoftication = document.querySelector('.dot-notfication-toggler');
+    hero.classList.toggle('open');
+    toggler.classList.toggle('open');
+    if(menuNoftication.classList.contains('active') || toggler.classList.contains('open')){
+        menuNoftication.classList.remove('active');
+    }
+    else if(!menuNoftication.classList.contains('active') && cartArray.length !== 0 && !toggler.classList.contains('open')){
+        menuNoftication.classList.add('active');
+    }
+}
 
 //Set Cart Shooping Body State
 function updateCartDisplay() {
@@ -116,14 +115,20 @@ function updateCartDisplay() {
 
 //Check is there any item in cart to Show Notfication
 function checkNotification() {
+    let toggler = document.querySelector('.navbar-toggler');
     let menuNoftication = document.querySelector('.dot-notfication-toggler');
     let cartNoftication = document.querySelector('.dot-notfication');
     if (cartArray.length === 0) {
         menuNoftication.classList.remove('active');
         cartNoftication.classList.remove('active');
-    } else {
-        menuNoftication.classList.add('active');
+    } else if(cartArray.length >0 ) {
         cartNoftication.classList.add('active');
+    }
+    if (toggler.classList.contains('open')) {
+        menuNoftication.classList.remove('active');
+    }
+    if (!toggler.classList.contains('open') && cartArray.length !== 0) {
+        menuNoftication.classList.add('active');
     }
 }
 
