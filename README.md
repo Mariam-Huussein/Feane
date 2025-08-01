@@ -32,7 +32,7 @@ This project was developed as a frontend training task and replicates the layout
 - **JavaScript (Vanilla)**
 - **Bootstrap 5**
 - **Font Awesome**
-- **AOS (Animate On Scroll) via CDN
+- **AOS (Animate On Scroll) via CDN**
 
 ---
 
